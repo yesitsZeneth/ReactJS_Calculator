@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    display:  flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.container {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 256px;
+    text-align: center;
+    border: 18px solid #1a1616;
+    background: #131111;
+    border-radius: 30px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+input[type = "text"] {
+    height: 75px;
+    width: 249px;
+    background-color: #131111;
+    border: 0px;
+    color: #dfad6d;
+    text-align: right;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#clear {
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #0c0606;
+}
+
+#result {
+    grid-column: 3/5;
+    grid-row: 5;
+    color: #131111;
+}
+
+#backspace {
+    color: #0c0606;
+}
+
+button {
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #242020;
+    color:white;
+    font-weight: 500;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+.highlight {
+    background: #5c3d03;
+}
